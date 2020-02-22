@@ -46,3 +46,18 @@ set(df.columns) = set(new_columns)
 
 Quick Reference
 df.drop_duplicates(subset = 'x_loc')
+df.isnull()
+df.notnull()
+df.dropna(how='all')  # if all columns are null
+df.dropna(subset=['x_loc', 'y_loc'], how='any') #if any one is missing
+df.dropna(subset=['x_loc', 'y_loc'], how='any')  # if both are missing
+
+ufo['Shape Reported'].value_counts(dropna=False)  # value of each type
+ufo['Shape Reported'].fillna(value='VARIOUS', inplace=True)
+
+
+
+
+Sorting
+movies.sort_values('duration', ascending=False)
+movies.sort_values(['duration', 'rating'], ascending=False)
