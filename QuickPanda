@@ -12,11 +12,26 @@ myslice = df.filter[like='loc']
 myslice = df.filter[regxex='\d']
 
 Using iloc and loc
+df.iloc[4] or df.iloc[[2,6,8]]
+df.iloc[1:4]
+df.iloc[1:4, [2,4,5]]  # Selecting rows and columns
+df.iloc[2,4] # Selecting single value
 
+df.loc[0.6] # When x_loc is indexer
+df.loc[[0.6, 0.9, 1.2]]
+df.loc[:, ['x_loc', 'y_loc']]
 
-Getting columns
-df.columns
+row_number = df.index[4]
+
+Setting new index
+df.set_index('x_loc', inplace=True)
+
+Manipulating columns
+df.columns # Getting columns
+x_loc_column_index = df.columns.get_loc('x_loc')
 Rearranging columns
 set(df.columns) = set(new_columns)
 
+
+Quick Reference
 df.drop_duplicates(subset = 'x_loc')
