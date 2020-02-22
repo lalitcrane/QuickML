@@ -61,3 +61,6 @@ ufo['Shape Reported'].fillna(value='VARIOUS', inplace=True)
 Sorting
 movies.sort_values('duration', ascending=False)
 movies.sort_values(['duration', 'rating'], ascending=False)
+drinks.continent.value_counts().sort_values()
+drinks.continent.value_counts()['Africa']
+
