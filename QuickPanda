@@ -1,0 +1,22 @@
+Selecting Single Column
+
+df['x_loc'] or df.x_loc
+
+Multiple Columns
+df['x_loc', 'y_loc']
+columns = ['x_loc', 'y_loc']
+myslice = df[columns]
+
+Filtering based on column name like
+myslice = df.filter[like='loc']
+myslice = df.filter[regxex='\d']
+
+Using iloc and loc
+
+
+Getting columns
+df.columns
+Rearranging columns
+set(df.columns) = set(new_columns)
+
+df.drop_duplicates(subset = 'x_loc')
