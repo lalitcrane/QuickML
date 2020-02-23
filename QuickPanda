@@ -56,7 +56,8 @@ pd.concat([pd.DataFrame([i], columns=['A']) for i in range(5)],
           ignore_index=True)
           
 You can also used iloc to append a row.
-index_next = df.index + 1
+Getting row count - len(df.index), len(df), df.shape[0] or row,count = df.shape
+index_next = len(df.index) + 1
 pd.DataFrame.iloc[5,66, 'tutbulent', 'dense']
 
 df_new = df.append({'x_loc' : 5 , 'y_loc' : 22} , ignore_index=True)
