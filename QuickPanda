@@ -43,6 +43,27 @@ x_loc_column_index = df.columns.get_loc('x_loc')
 Rearranging columns
 set(df.columns) = set(new_columns)
 
+Append and Concat 
+Appending iteratively is costly. So create list, and append entire list to DataFrame.
+Append returns new object, does not add to original one.
+Conact is faster than Append. 
+
+df = pd.DataFrame([[1, 2], [3, 4]], columns=['A', 'B'])
+df2 = pd.DataFrame([[5, 6], [7, 8]], columns=['A', 'B'])
+df_new = df.append(df2, ignore_index=True)
+
+pd.concat([pd.DataFrame([i], columns=['A']) for i in range(5)],
+          ignore_index=True)
+          
+You can also used iloc to append a row.
+index_next = df.index + 1
+pd.DataFrame.iloc[5,66, 'tutbulent', 'dense']
+
+df_new = df.append({'x_loc' : 5 , 'y_loc' : 22} , ignore_index=True)
+df_new = df.append(pd.Series([5, 22], index=df.columns ), ignore_index=True)
+df_new = dfObj.append(listOfSeries , ignore_index=True)
+df.iloc[2] = [5,66, 'tutbulent', 'dense']
+df.loc['x_loc'] = [5,66, 'tutbulent', 'dense']  #x_loc is the index
 
 Quick Reference
 df.drop_duplicates(subset = 'x_loc')
