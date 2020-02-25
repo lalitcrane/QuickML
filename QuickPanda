@@ -36,8 +36,10 @@ single_point = df.iat[rownum, colnum]
 
 Setting new index
 df.set_index('x_loc', inplace=True)
+
 Setting Single Cell in Dataframe
 df.set_value(index, 'COL_NAME', value)
+df.loc[conditional_index , [col name]]= <new value>
 
 Manipulating columns
 df.columns # Getting columns
