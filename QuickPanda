@@ -39,7 +39,8 @@ row_number = df.index[4]
 iat and at are much faster than loc and iloc in selecting single values
 x_val = 0.3
 single_point = df.loc[x_val, 'y_loc']
-single_point = df.af[x_val, 'y_loc']
+single_point = single_point = df.af[x_val, 'y_loc']
+df.at[501,'column_name']  #501 represents the row index.
 timeit single_point = df.af[x_val, 'y_loc']  #knowing how much time this operatiion takes
 single_point = df.iloc[rownum, colnum]
 single_point = df.iat[rownum, colnum]
