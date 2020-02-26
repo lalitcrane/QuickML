@@ -23,6 +23,17 @@ df.loc[0.6] # When x_loc is indexer
 df.loc[[0.6, 0.9, 1.2]]
 df.loc[:, ['x_loc', 'y_loc']]
 
+#While Operating on Dataframe, the index operations such as below row array. 
+# This array index when used as input in iloc will also return a array.
+# When you get array, to get value at individual cell, you need to use values[0]
+#This will return single value.
+val = df['col_name'].values[0]
+#This will return array index
+index = df.loc[df['x_loc' == 4]]['current_cell'].index
+#Since index is also an array index, you will get array in below operation
+mycell_array = df.iloc[index]['current_cell']
+mycell = mycell_array.values[0] # Here we need to check if mycell_array is empty or not, using mycell_array.size == 0
+
 row_number = df.index[4]
 
 iat and at are much faster than loc and iloc in selecting single values
