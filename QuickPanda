@@ -138,9 +138,16 @@ df_sim.x_loc.unique()
 Dictionary
 dict = { '22': 'cell22', '33': 'cell33', '44': 'cell44' }
 dict.hasKey('22')
+dict.keys()
 myval = dict.get('22') # will return value
 myval = dict.get('99') # will return None
 myval = dict.get('99', 'Custom No Value') # will return 'Custom No Value'
+Creating Dictionary from Numpy Array
+dict_cells = {dict_key: 'value'+str(i) for i, dict_key, i in enumerate(np_array)}
+
+Pandas Dataframe to Numpy Array and then create dictionary
+np_array = df_sim['loc'].to_numpy()
+dict_cells = {dict_key: 'value'+str(i) for i, dict_key, i in enumerate(np_array)}  # create dictionary using enumerate
 
 
 
