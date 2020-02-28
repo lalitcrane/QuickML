@@ -1,3 +1,9 @@
+Best Practises
+Use .loc and .iloc method. Better than just conditional expression to access cells.
+Use of .at and .iat is faster than other methods when accessing single cell.
+.assign is useful when you wnat to set more than one column values. 
+.assign is also useful when we want to chaining.e.g. df.assing(do one thing).(do second thing)
+
 Selecting Single Column
 
 df['x_loc'] or df.x_loc
@@ -49,15 +55,29 @@ single_point = df.iat[rownum, colnum]
 Setting new index
 df.set_index('x_loc', inplace=True)
 
-Setting Single Cell in Dataframe
+Setting Single Cell in Dataframe  # Use loc method
+df_sim.loc[df_sim['x_loc']==0.0, 'occupied'] = True 
 df.set_value(index, 'COL_NAME', value)
 df.loc[conditional_index , [col name]]= <new value>
+
 
 Manipulating columns
 df.columns # Getting columns
 x_loc_column_index = df.columns.get_loc('x_loc')
 Rearranging columns
 set(df.columns) = set(new_columns)
+
+Dataframe Apply and Assign for new or old columns
+df_sim['current_cell'] = df_sim.apply(lambda row: getInitCell(row, r, vel_at_entry) if row['x_loc'] == 0.0 else np.NaN, axis=1)
+df.assign(temp_f=lambda x: x.temp_c * 9 / 5 + 32)
+          temp_c  temp_f
+Portland    17.0    62.6
+Berkeley    25.0    77.0
+df.assign(New_team = lambda x: df['Team']+'_GO',  
+          Revised_Salary = lambda x: df['Salary']  
+                             + df['Salary'] / 10)
+# Assign allows chaining e.g. df.assign(some assign).(do something else)
+
 
 Append and Concat 
 Appending iteratively is costly. So create list, and append entire list to DataFrame.
@@ -111,4 +131,16 @@ movies.sort_values('duration', ascending=False)
 movies.sort_values(['duration', 'rating'], ascending=False)
 drinks.continent.value_counts().sort_values()
 drinks.continent.value_counts()['Africa']
+
+Unique
+df_sim.x_loc.unique()
+
+Dictionary
+dict = { '22': 'cell22', '33': 'cell33', '44': 'cell44' }
+dict.hasKey('22')
+myval = dict.get('22') # will return value
+myval = dict.get('99') # will return None
+myval = dict.get('99', 'Custom No Value') # will return 'Custom No Value'
+
+
 
