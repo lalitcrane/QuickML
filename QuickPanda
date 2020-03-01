@@ -55,6 +55,8 @@ row_number = df.index[4]
 Query
 df_filtered = df.query('salary>30000')
 df_filtered = df[(df.salary >= 30000) & (df.year == 2017)]  # Query with Chaining
+df.filter(regex='e$', axis=1)  # Using Filter, axis = 1 is column selection with regx
+df.filter(like='bbi', axis=0)  # Using like, selecting rows containg word with bbi in it
 
 iat and at are much faster than loc and iloc in selecting single values
 x_val = 0.3
