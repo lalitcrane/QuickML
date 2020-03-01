@@ -35,7 +35,7 @@ df.loc[int] = Dataframe if you have more than one column and Series if you have 
 df.loc[:, ["col_name"]] = Dataframe
 df.loc[:, "col_name"] = Series
 
-Not using loc
+When Not using loc
 df["col_name"] = Series
 df[["col_name"]] = Dataframe
 
@@ -51,6 +51,10 @@ mycell_array = df.iloc[index]['current_cell']
 mycell = mycell_array.values[0] # Here we need to check if mycell_array is empty or not, using mycell_array.size == 0
 
 row_number = df.index[4]
+
+Query
+df_filtered = df.query('salary>30000')
+df_filtered = df[(df.salary >= 30000) & (df.year == 2017)]  # Query with Chaining
 
 iat and at are much faster than loc and iloc in selecting single values
 x_val = 0.3
