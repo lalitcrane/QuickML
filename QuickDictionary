@@ -1,0 +1,17 @@
+
+
+Filtering Dictionary in one line
+dict((k, v) for (k, v) in points.iteritems() if v[0] < 5 and v[1] < 5)
+
+Filtering Dictionary by creating a filter method for it.
+class FilterDict(dict):
+    def __init__(self, input_dict):
+        for key, value in input_dict.iteritems():
+            self[key] = value
+    def filter(self, criteria):
+        for key, value in self.items():
+            if (criteria(value)):
+                self.pop(key)
+
+my_dict = FilterDict( {'a':(3,4), 'b':(1,2), 'c':(5,5), 'd':(3,3)} )
+my_dict.filter(lambda x: x[0] < 5 and x[1] < 5)
