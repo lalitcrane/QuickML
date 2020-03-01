@@ -2,6 +2,37 @@
 
 Filtering Dictionary in one line
 dict((k, v) for (k, v) in points.iteritems() if v[0] < 5 and v[1] < 5)
+Or
+dict((k, v) for k, v in points.items() if all(x < 5 for x in v))
+Or
+newDict = { key:value for (key,value) in dictOfNames.items() if key % 2 == 0}
+
+# Filter dictionary by keeping elements whose keys are divisible by 2
+newDict = dict(filter(lambda elem: elem[0] % 2 == 0, dictOfNames.items()))
+----------------------------------------------
+Python
+newDict = dict()
+
+# Iterate over all the items in dictionary and filter items which has even keys
+for (key, value) in dictOfNames.items():
+# Check if key is even then add pair to new dictionary
+    if key % 2 == 0:
+        newDict[key] = value
+
+print('Filtered Dictionary : ')
+print(newDict)
+
+--------------------------------------
+newDict = dict()
+# Iterate over all the items in dictionary and filter items which has even keys
+for (key, value) in dictOfNames.items():
+   # Check if key is even then add pair to new dictionary
+   if key % 2 == 0:
+       newDict[key] = value
+ 
+print('Filtered Dictionary : ')
+print(newDict)
+
 
 Filtering Dictionary by creating a filter method for it.
 class FilterDict(dict):
