@@ -43,3 +43,15 @@ result = filter(lambda x: x % 2, myarray)  # will return elements with even valu
 reduce(lambda x,y: x+y, [1,2,3,4])  #will return addition of all elements
 # Calculating the sum of the numbers from 1 to 100:
 reduce(lambda x, y: x+y, range(1,101))
+
+
+# Print Statements
+
+name = 'Tushar'
+age = 23
+print(f"Hello, My name is {name} and I'm {age} years old.") 
+
+import datetime 
+  
+today = datetime.datetime.today() 
+print(f"{today:%B %d, %Y}")   # Output = April 04, 2018
