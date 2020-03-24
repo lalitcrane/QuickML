@@ -166,3 +166,14 @@ np_array = df_sim['loc'].to_numpy()
 dict_cells = {dict_key: 'value'+str(i) for i, dict_key, i in enumerate(np_array)}  # create dictionary using enumerate
 
 
+Saving the data to a file
+df.to_csv('file1.csv') 
+df.to_csv('file2.csv', header=False, index=False)
+df.to_csv(r'C:\Users\Admin\Desktop\file3.csv', index=False) 
+
+compression_opts = dict(method='zip',
+                        archive_name='out.csv')
+df.to_csv('out.zip', index=False,
+          compression=compression_opts)
+Many Options exists to save file.e.g. separator, date/decimal formats, line terminator,
+compression, escapae character
