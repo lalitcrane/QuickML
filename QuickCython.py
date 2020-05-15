@@ -17,8 +17,6 @@ setup(
 )
 # End of file.
 
-Use below compiler directive in ext_modules to use python3
-compiler_directives={'language_level' : "3"} 
 
 Step 3.
 Run below command on command prompt
@@ -31,4 +29,10 @@ import hello
 hello.printMe('Hi There')
 
 Few Tips.
+1. Use below compiler directive in ext_modules to use python3
+compiler_directives={'language_level' : "3"} 
+
+2. Python version will create serious mismatch in cython module loading.
+
+3. If Cython Modules are not compiling, try removing/adding __init__.py file from/to the folder and compile.
 
