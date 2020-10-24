@@ -31,5 +31,14 @@ One Hot Encoding - So out of the n columns, only one column can have value = 1 a
 
 https://www.kaggle.com/apratik46/credit-card-default-prediction
 
+## Stanford NLP
+
+http://cs224d.stanford.edu/syllabus.html
+
+## Stanford Convolutional Neural Networks
+
+http://cs231n.stanford.edu/syllabus.html
+
+
 
 
