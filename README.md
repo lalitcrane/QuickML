@@ -1,5 +1,11 @@
 # QuickML
 
+# Theory of for ML
+
+https://ml-cheatsheet.readthedocs.io/en/latest/
+
+Regression, Neural Networks, Maths
+
 # Kaggle resource for Machine Learning
 
 https://www.kaggle.com/lucabasa/credit-card-default-a-very-pedagogical-notebook
