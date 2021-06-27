@@ -1,3 +1,22 @@
+This **word** is bold. This <em>word</em> is italic.
+
+<div>
+    <b> GPU on <em>Google Collaboratory</em> and Kaggle </b>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Pricing</th>
+            <th>Remark</th>
+        </tr>
+        <tr>
+            <td>Kaggle</td>
+            <td> $ 10 per month</td>
+            <td> No formula defined for how much GPU time you can get</td>
+        </tr>
+    </table>
+    <hr>
+ </div>
+
 
 #### GPU Device Cost and Cloud Costs.
 
