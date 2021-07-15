@@ -1,4 +1,7 @@
-
+# Simple GUI and Data Science Package for Python
+  https://streamlit.io/
+  html style elements (buttons, input, slider etc etc)
+  charts and 
 
 # Reload a package after changes
 
