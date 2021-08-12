@@ -1,3 +1,28 @@
+#### Python Performance and GPUs
+
+https://towardsdatascience.com/python-performance-and-gpus-1be860ffd58d
+
+#####  Performance of GPU accelerated Python Libraries
+    * Numpy on the GPU: CuPy
+    * Numpy on the GPU (again): Jax
+    * Pandas on the GPU: RAPIDS cuDF
+    * Scikit-Learn on the GPU: RAPIDS cuML
+
+  * Python libraries written in CUDA like CuPy and RAPIDS
+  * Python-CUDA compilers, specifically Numba
+  * Scaling these libraries out with Dask
+  * Network communication with UCX
+  * Packaging with Conda
+
+
+#### Dask
+
+https://examples.dask.org/applications/stencils-with-numba.html
+
+#### NUMBA - Just in time Compiler
+
+https://examples.dask.org/applications/stencils-with-numba.html
+
 
 ### Rapids Cloud
 #### Deploying Rapids in Cloud (GCP or AWS or AZure)
